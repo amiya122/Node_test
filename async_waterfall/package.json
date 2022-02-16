@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "async": "^3.2.3"
+  },
+  "name": "async_waterfall",
+  "version": "1.0.0",
+  "main": "async_waterfall.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node async_waterfall.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -25,20 +25,23 @@ if(constraints.length>4){
     constraints.pop();
 }
 
-const response={
-    ruleKey:"SOLUTIO",
+const {ruleKey,ruleValue,ruleOperator}={
+    ruleKey:"SOLUTION",
     ruleValue:"OFFBOARDING",
     ruleOperator:"!=="
 };
 
-let output=constraints.filter((obj)=>obj.ruleKey===response.ruleKey);
-const {ruleKey,ruleValue,ruleOperator}=response;
+let output=constraints.filter((obj)=>obj.ruleKey===ruleKey);
+
 if(output.length>0){
-    output[0].ruleKey=ruleKey;
-    output[0].ruleValue=ruleValue;
-    output[0].ruleOperator=ruleOperator;
-    console.log(output);
+    constraints.map((obj)=>{
+        if(obj.ruleKey===ruleKey){
+            obj.ruleValue=ruleValue;
+            obj.ruleOperator=ruleOperator;
+        }
+    });
 }else{
     constraints.push({ruleKey,ruleValue,ruleOperator});
-    console.log(constraints);
 }
+
+console.log(constraints);

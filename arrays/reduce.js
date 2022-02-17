@@ -8,3 +8,9 @@ function reducer(previous, current, index, array) {
 
 array.reduce(reducer);
 console.log(array);
+
+
+let sum=[0,1,2,3,4,5].reduce((prev,curr)=>{
+    return prev+curr;
+},0);
+console.log(sum);
